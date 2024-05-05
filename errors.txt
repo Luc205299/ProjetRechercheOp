@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\lucas\OneDrive - Efrei\A_Ecole\S6\pythonProject\main.py", line 57, in <module>
+    penalites = calculPenalites(tpmmatrice, demande, offre)
+  File "C:\Users\lucas\OneDrive - Efrei\A_Ecole\S6\pythonProject\Hammer.py", line 14, in calculPenalites
+    if (offre[i] == 0):                                                     #si une ligne est vide
+IndexError: list index out of range

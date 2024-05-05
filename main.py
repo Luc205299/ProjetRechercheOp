@@ -34,15 +34,11 @@ while choice != 1:
         case "9":
             file_path = 'file9.txt'
         case "10":
-            file_path = 'src/table 10.txt'
+            file_path = 'file10.txt'
         case "11":
-            file_path = 'src/table 11.txt'
+            file_path = 'file11.txt'
         case "12":
-            file_path = 'src/table 12.txt'
-        case "13":
-            file_path = 'src/table 13.txt'
-        case "14":
-            file_path = 'src/table 14.txt'
+            file_path = 'file12.txt'
         case "test":
             file_path = 'test.txt'
         case "complex":

@@ -1,7 +1,12 @@
 
 from fonction import *
 from Hammer import *
+
 import sys
+import importlib
+
+# Par exemple, si votre module s'appelle fonction
+
 #sys.stderr = open('errors.txt', 'w')
 
 choice = 0
@@ -40,8 +45,10 @@ while choice != 1:
             file_path = 'src/table 14.txt'
         case "test":
             file_path = 'test.txt'
+        case "complex":
+            continue
 
-
+    mat_sol=[]
     ligne, colonne, matrice = read_constraints(file_path)
     print(ligne,colonne, matrice)
     matrice_cout(ligne, colonne,matrice)
@@ -51,11 +58,12 @@ while choice != 1:
     print(solution)
     print('cout total : ',cout_total)
     Affichage_North_Ouest(matrice,solution,colonne,ligne)
-    mes_lignes, mes_colonnes, tpmmatrice = read_constraints('file1.txt')
-    matrice2, offre, demande = extraction_mat(tpmmatrice)
-    penalites = calculPenalites(matrice2, demande, offre)
-    res_matrix = initMatriceResultat(matrice2)
+    print(' ___________________________ ')
     print('Balas Hammer')
-    mat_sol,cout = transport(matrice2, demande, offre)
+    mes_lignes, mes_colonnes, tpmmatrice = read_constraints(file_path)
+    matrice2, offre, demande = extraction_mat(tpmmatrice)
+    penalites = calculer_pénalités(matrice2, demande, offre)
+    res_matrix = initialiser_matrice_résultat(matrice2)
+    mat_sol,cout = transporter(matrice2, demande, offre)
     print('cout = ',cout)
     Affichage_North_Ouest(matrice, mat_sol, colonne, ligne)
